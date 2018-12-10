@@ -11,8 +11,9 @@ body {
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 300px;
+  height: 500px;
   margin-left: -900px;
+  margin-top: -60px;
 }
 
 .pokemon-options {
@@ -39,12 +40,16 @@ body {
   cursor: pointer;
 }
 
+.pokemon-options li:hover {
+  color: yellow;
+}
+
 .selected {
   color: yellow;
 }
 
 .blury {
-  filter: blur(0.5rem);
+  filter: blur(0.8rem);
 }
 
 .App-header {

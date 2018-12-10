@@ -31,6 +31,7 @@ class App extends Component {
       selectedPokemon: null,
       wrong: false,
       reveal: false,
+      count: 5,
     };
   }
 
@@ -42,7 +43,6 @@ class App extends Component {
     const { onCorrectAnswer, onErrorAnswer } = this.props;
     const { pokemon } = this.state;
 
-    console.log('pokemon.name, guessedName: ', pokemon.name, guessedName);
     if (guessedName === pokemon.name) {
       onCorrectAnswer();
       this.setState({ wrong: false, reveal: true });
@@ -50,6 +50,15 @@ class App extends Component {
       onErrorAnswer();
       this.setState({ wrong: true, reveal: true });
     }
+
+    setInterval(() => {
+      this.setState(s => ({
+        count: s.count - 1,
+      }));
+    }, 1000);
+    setTimeout(() => {
+      window.location.reload();
+    }, 5000);
   }
 
   onSelectPokemon(e) {
@@ -57,7 +66,7 @@ class App extends Component {
   }
 
   render() {
-    const { pokemon, options, wrong, reveal } = this.state;
+    const { pokemon, options, wrong, reveal, count } = this.state;
     if (!pokemon) {
       return null;
     }
@@ -82,6 +91,7 @@ class App extends Component {
             className={`pokemon-options ${wrong && 'visible'}`}
             data-selector="pokemon-options"
           >
+            <strong>{(wrong || reveal) && `Next in ${count}`}</strong>
             {options.map(p => (
               <li
                 className={p.name === this.state.guessedName && 'selected'}
