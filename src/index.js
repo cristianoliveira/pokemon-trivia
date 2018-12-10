@@ -30,7 +30,6 @@ const onCorrectAnswer = () => {
 
 const onErrorAnswer = () => {
   errorAnswerSound();
-  setTimeout(() => alert('You are wrong!!!'), 1500);
 };
 
 ReactDOM.render(

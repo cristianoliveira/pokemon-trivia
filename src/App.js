@@ -38,11 +38,11 @@ class App extends Component {
     this.setState({ guessedName: e.target.value });
   }
 
-  onSubmitForm(e) {
-    e.preventDefault();
+  onSubmitForm(guessedName) {
     const { onCorrectAnswer, onErrorAnswer } = this.props;
-    const { pokemon, guessedName } = this.state;
+    const { pokemon } = this.state;
 
+    console.log('pokemon.name, guessedName: ', pokemon.name, guessedName);
     if (guessedName === pokemon.name) {
       onCorrectAnswer();
       this.setState({ wrong: false, reveal: true });
@@ -65,6 +65,12 @@ class App extends Component {
     return (
       <div className="App">
         <header data-selector="pokemon-header" className="App-header">
+          {wrong && (
+            <div className={`pokemon-answer-${wrong ? 'visible' : 'hidden'}`}>
+              <h2>{'You are wrong!!'}</h2>
+              <h1 className="App-title">{'Correct answer: ' + pokemon.name}</h1>
+            </div>
+          )}
           <div data-selector="pokemon-image">
             <img
               src={pokemon.image}
@@ -72,12 +78,16 @@ class App extends Component {
               alt="logo"
             />
           </div>
-          <div className="pokemon-options" data-selector="pokemon-options">
-            {wrong && <h1 className="App-title">{pokemon.name}</h1>}
+          <div
+            className={`pokemon-options ${wrong && 'visible'}`}
+            data-selector="pokemon-options"
+          >
             {options.map(p => (
               <li
+                className={p.name === this.state.guessedName && 'selected'}
                 onClick={() => {
                   this.onSelectPokemon(p.name);
+                  this.onSubmitForm(p.name);
                 }}
               >
                 {p.name}
