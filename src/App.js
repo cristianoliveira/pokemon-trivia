@@ -21,11 +21,11 @@ class App extends Component {
 
   onSubmitForm(e) {
     e.preventDefault();
-    const { onCorrectMessage } = this.props;
+    const { onCorrectAnswer } = this.props;
     const { pokemon, guessedName } = this.state;
 
     if (guessedName === pokemon.name) {
-      onCorrectMessage();
+      onCorrectAnswer();
       this.setState({ wrong: false, reveal: true });
     } else {
       this.setState({ wrong: true, reveal: true });

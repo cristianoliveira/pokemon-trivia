@@ -23,7 +23,7 @@ describe('App', () => {
 
   describe('success message', () => {
     it('when user input a correct pokemon it shows shows success message', () => {
-      const props = { ...defaultProps, onCorrectMessage: jest.fn() };
+      const props = { ...defaultProps, onCorrectAnswer: jest.fn() };
 
       const component = mount(<App {...props} />).find(
         '[data-selector="pokemon-form"]',
@@ -31,11 +31,11 @@ describe('App', () => {
       component.find('input').simulate('change', { target: { value: 'foo' } });
       component.simulate('submit', {});
 
-      expect(props.onCorrectMessage).toHaveBeenCalled();
+      expect(props.onCorrectAnswer).toHaveBeenCalled();
     });
 
     it('when user input a wrong pokemon it does not shows shows success message', () => {
-      const props = { ...defaultProps, onCorrectMessage: jest.fn() };
+      const props = { ...defaultProps, onCorrectAnswer: jest.fn() };
 
       const component = mount(<App {...props} />).find(
         '[data-selector="pokemon-form"]',
@@ -45,7 +45,7 @@ describe('App', () => {
         .simulate('change', { target: { value: 'wrong' } });
       component.simulate('submit', {});
 
-      expect(props.onCorrectMessage).not.toHaveBeenCalled();
+      expect(props.onCorrectAnswer).not.toHaveBeenCalled();
     });
   });
 });
