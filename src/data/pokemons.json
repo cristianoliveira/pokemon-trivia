@@ -1,0 +1,104 @@
+{
+  "data": [
+    {
+      "name": "voltorb",
+      "image":
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/100.png"
+    },
+    {
+      "name": "electrode",
+      "image":
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/101.png"
+    },
+    {
+      "name": "exeggcute",
+      "image":
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/102.png"
+    },
+    {
+      "name": "exeggutor",
+      "image":
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/103.png"
+    },
+    {
+      "name": "cubone",
+      "image":
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/104.png"
+    },
+    {
+      "name": "marowak",
+      "image":
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/105.png"
+    },
+    {
+      "name": "hitmonlee",
+      "image":
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/106.png"
+    },
+    {
+      "name": "hitmonchan",
+      "image":
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/107.png"
+    },
+    {
+      "name": "lickitung",
+      "image":
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/108.png"
+    },
+    {
+      "name": "koffing",
+      "image":
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/109.png"
+    },
+    {
+      "name": "weezing",
+      "image":
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/110.png"
+    },
+    {
+      "name": "rhyhorn",
+      "image":
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/111.png"
+    },
+    {
+      "name": "rhydon",
+      "image":
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/112.png"
+    },
+    {
+      "name": "chansey",
+      "image":
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/113.png"
+    },
+    {
+      "name": "tangela",
+      "image":
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/114.png"
+    },
+    {
+      "name": "kangaskhan",
+      "image":
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/115.png"
+    },
+    {
+      "name": "horsea",
+      "image":
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/116.png"
+    },
+    {
+      "name": "seadra",
+      "image":
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/117.png"
+    },
+    {
+      "name": "goldeen",
+      "image":
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/118.png"
+    },
+    {
+      "name": "seaking",
+      "image":
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/119.png"
+    }
+  ]
+}
