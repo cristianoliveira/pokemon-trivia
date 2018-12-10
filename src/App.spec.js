@@ -10,7 +10,13 @@ Enzyme.configure({ adapter: new Adapter() });
 describe('App', () => {
   const defaultProps = {
     nextPokemon: list => list[0],
-    pokemons: [{ name: 'foo', image: 'foo.jpg' }],
+    pokemons: [
+      { name: 'foo', image: 'foo.jpg' },
+      { name: 'bla', image: 'bla.jpg' },
+      { name: 'baz', image: 'baz.jpg' },
+      { name: 'bla', image: 'bla.jpg' },
+      { name: 'qaz', image: 'qaz.jpg' },
+    ],
     onCorrectAnswer: () => {},
     onErrorAnswer: () => {},
   };
@@ -76,6 +82,18 @@ describe('App', () => {
       component.simulate('submit', {});
 
       expect(props.onErrorAnswer).not.toHaveBeenCalled();
+    });
+  });
+
+  describe('options', () => {
+    it('has at least 4 options', () => {
+      const props = { ...defaultProps, onErrorAnswer: jest.fn() };
+
+      const component = mount(<App {...props} />).find(
+        '[data-selector="pokemon-options"]',
+      );
+
+      expect(component.find('li')).toHaveLength(4);
     });
   });
 });

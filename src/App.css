@@ -13,6 +13,19 @@ body {
   margin-left: -900px;
 }
 
+.pokemon-options {
+  position: absolute;
+  top: 300px;
+  right: 60px;
+  width: 350px;
+  text-align: initial;
+}
+
+.pokemon-options li {
+  margin: 20px;
+  font-size: 30px;
+}
+
 .blury {
   filter: blur(0.5rem);
 }

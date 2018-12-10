@@ -4,10 +4,13 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import response from './data/pokemons.json';
+import 'confetti-js';
 
 const getRandFromList = myArray =>
   myArray[Math.floor(Math.random() * myArray.length)];
 
+var confettiSettings = { target: 'my-canvas' };
+var confetti = new window.ConfettiGenerator(confettiSettings);
 const successSound = new Audio('http://localhost:3000/aplause.wav');
 const correctAnswerSound = () => {
   successSound.loop = false;
@@ -22,12 +25,12 @@ const errorAnswerSound = () => {
 
 const onCorrectAnswer = () => {
   correctAnswerSound();
-  alert('You are right!!!');
+  confetti.render();
 };
 
 const onErrorAnswer = () => {
   errorAnswerSound();
-  alert('You are wrong!!!');
+  setTimeout(() => alert('You are wrong!!!'), 1500);
 };
 
 ReactDOM.render(

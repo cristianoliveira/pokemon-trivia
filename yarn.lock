@@ -1606,6 +1606,10 @@ concat-stream@^1.6.0:
     readable-stream "^2.2.2"
     typedarray "^0.0.6"
 
+confetti-js@0.0.14:
+  version "0.0.14"
+  resolved "https://registry.yarnpkg.com/confetti-js/-/confetti-js-0.0.14.tgz#c719cd713630fe58f6e641f541e92e06a0d9cdd2"
+
 configstore@^3.0.0:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/configstore/-/configstore-3.1.2.tgz#c6f25defaeef26df12dd33414b001fe81a543f8f"
